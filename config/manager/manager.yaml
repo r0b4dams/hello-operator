@@ -72,6 +72,11 @@ spec:
         - --leader-elect
         image: controller:latest
         name: manager
+        env:
+        - name: HELLO_IMAGE
+          value: hello-world:latest
+        - name: HELLO_IMAGE
+          value: hello-world:latest
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:

@@ -5,6 +5,32 @@
 domain: hello
 layout:
 - go.kubebuilder.io/v4
+plugins:
+  deploy-image.go.kubebuilder.io/v1-alpha:
+    resources:
+    - domain: hello
+      group: demo
+      kind: Hello
+      options:
+        image: hello-world:latest
+      version: v1alpha1
+    - domain: hello
+      group: demo
+      kind: Hello
+      options:
+        image: hello-world:latest
+        runAsUser: "1001"
+      version: v1alpha1
 projectName: hello-operator
 repo: hello-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: hello
+  group: demo
+  kind: Hello
+  path: hello-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"
