@@ -63,15 +63,13 @@ kubectl delete -k config/samples/
 make uninstall
 ```
 
-**UnDeploy the controller from the cluster:**
+**Undeploy the controller from the cluster:**
 
 ```sh
 make undeploy
 ```
 
 ## Contributing
-
-// TODO(user): Add detailed information on how you would like others to contribute to this project
 
 **NOTE:** Run `make --help` for more information on all potential `make` targets
 
