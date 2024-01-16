@@ -15,6 +15,13 @@ plugins:
         image: r0b4dams/hello-world:1.0.0
         runAsUser: "1001"
       version: v1
+    - domain: example.com
+      group: demo
+      kind: HelloWorld
+      options:
+        image: r0b4dams/hello-world:1.0.1
+        runAsUser: "1001"
+      version: v1
 projectName: hello-operator
 repo: hello-operator
 resources:
