@@ -5,6 +5,26 @@
 domain: example.com
 layout:
 - go.kubebuilder.io/v4
+plugins:
+  deploy-image.go.kubebuilder.io/v1-alpha:
+    resources:
+    - domain: example.com
+      group: demo
+      kind: HelloWorld
+      options:
+        image: r0b4dams/hello-world:1.0.0
+        runAsUser: "1001"
+      version: v1
 projectName: hello-operator
 repo: hello-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: demo
+  kind: HelloWorld
+  path: hello-operator/api/v1
+  version: v1
 version: "3"
