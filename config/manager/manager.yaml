@@ -74,7 +74,7 @@ spec:
         name: manager
         env:
         - name: HELLOWORLD_IMAGE
-          value: r0b4dams/hello-world:1.0.0
+          value: r0b4dams/hello-world:1.1.0
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
